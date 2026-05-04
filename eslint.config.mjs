@@ -1,12 +1,19 @@
-import { defineConfig } from 'eslint/config';
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTs from 'eslint-config-next/typescript';
 
-export default defineConfig([
+export default [
   ...nextVitals,
   ...nextTs,
   {
-    ignores: ['**/.next/**', '**/node_modules/**', '**/next/**'],
+    ignores: [
+      '.next/**',
+      'out/**',
+      'build/**',
+      'next-env.d.ts',
+      'node_modules/**',
+      'server/**',
+      'vite.config.ts'
+    ],
   },
   {
     rules: {
@@ -15,4 +22,4 @@ export default defineConfig([
       '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
-]);
+];
