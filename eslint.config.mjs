@@ -1,18 +1,18 @@
-import js from "@eslint/js";
-import ts from "typescript-eslint";
-import reactRefresh from "eslint-plugin-react-refresh";
+import { defineConfig } from 'eslint/config';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
 
-export default [
+export default defineConfig([
+  ...nextVitals,
+  ...nextTs,
   {
-    ignores: ["**/dist/**", "**/.next/**", "**/node_modules/**", "**/server/**"],
+    ignores: ['**/.next/**', '**/node_modules/**', '**/next/**'],
   },
-  ...ts.configs.recommended,
   {
-    plugins: {
-      "react-refresh": reactRefresh,
-    },
     rules: {
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
-];
+]);

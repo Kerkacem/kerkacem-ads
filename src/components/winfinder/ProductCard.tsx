@@ -1,4 +1,6 @@
-export const ProductCard = ({ product }: { product: any }) => (
+export const ProductCard = ({ product }: { 
+  product: { name: string, score: number, margin: number, price: number, competition: string } 
+}) => (
   <div className="bg-[#111111] border border-gray-800 rounded-xl p-5 hover:border-orange-500 transition-all">
     <div className="h-40 bg-gray-900 mb-4 rounded-lg flex items-center justify-center">
       <span className="text-gray-500">Product Image</span>

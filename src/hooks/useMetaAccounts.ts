@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react';
 
+// Define Account type instead of 'any'
+interface AdAccount {
+  id: string;
+  name: string;
+}
+
 export const useMetaAccounts = (token: string) => {
-  const [accounts, setAccounts] = useState(null);
+  const [accounts, setAccounts] = useState<AdAccount[] | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchAccounts = async () => {

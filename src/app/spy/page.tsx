@@ -1,8 +1,15 @@
 'use client';
 import { AdCard } from '@/components/spy/AdCard';
 
+interface Ad {
+  brandName: string;
+  copy: string;
+  likes: number;
+  daysActive: number;
+}
+
 export default function SpyToolPage() {
-  const mockAds = [
+  const mockAds: Ad[] = [
     { brandName: 'Brand A', copy: 'Découvrez nos offres exclusives...', likes: 1200, daysActive: 15 },
     { brandName: 'Brand B', copy: 'Profitez de -50% sur tout le site!', likes: 850, daysActive: 30 },
   ];
