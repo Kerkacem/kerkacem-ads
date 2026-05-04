@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@fastify/jwt": "^10.0.0",
+    "@google/generative-ai": "^0.24.1",
+    "@prisma/client": "^7.8.0",
+    "axios": "^1.16.0",
+    "crypto-js": "^4.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "node-cron": "^4.2.1"
+  },
+  "devDependencies": {
+    "prisma": "^7.8.0"
+  }
+}

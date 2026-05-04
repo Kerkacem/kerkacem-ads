@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String      @id @default(uuid())
+  email     String      @unique
+  password  String
+  name      String?
+  created_at DateTime   @default(now())
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  workspaceId String   @map("workspace_id")
+  name        String
+  price_sale  Float
+  price_cost  Float
+  margin      Float
+  status      String   @default("ACTIVE")
+  created_at  DateTime @default(now())
+
+  @@index([workspaceId, name])
+}
+
+model ActionLog {
+  id          String   @id @default(uuid())
+  workspaceId String   @map("workspace_id")
+  actionType  String   @map("action_type")
+  input       Json
+  output      Json
+  tokensUsed  Int      @map("tokens_used")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@index([workspaceId, actionType])
+}
+
