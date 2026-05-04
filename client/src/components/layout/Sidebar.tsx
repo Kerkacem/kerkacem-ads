@@ -1,3 +1,4 @@
+'use client';
 import { LayoutDashboard, Bot, Sparkles, Search, Package, CheckSquare, Users, Eye, BarChart3, Settings, CreditCard, Plug, LogOut, ChevronLeft, ChevronRight, Bell } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
