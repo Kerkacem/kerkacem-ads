@@ -1,46 +1,36 @@
-# BEKO ADS PILOT
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-L'OS intelligent pour gérer, analyser et scaler les campagnes Meta & TikTok Ads pour les e-commerçants COD.
+## Getting Started
 
-## 🚀 Fonctionnalités Clés
-- **Dashboard IA:** KPIs en temps réel avec analyse de performance et ROAS réel (ajusté COD).
-- **Hub Agent IA:** Agent de chat expert (RAG-lite, context-aware) avec système de réflexion autonome.
-- **Spy Tool:** Intelligence compétitive avec analyse de menaces et opportunités par IA.
-- **WinFinder:** Détecteur de produits gagnants avec Pipeline Kanban et analyse de rentabilité.
-- **Sentinel:** Agent autonome qui surveille les campagnes 24/7 et alerte en cas de perte de profit.
-- **Product DB:** Intelligence produit avec 12 champs stratégiques et simulateur de profit.
-- **Reports:** Rapports automatisés avec export PDF et synthèse exécutive.
+First, run the development server:
 
-## 🛠 Tech Stack
-- **Frontend:** Next.js 14, Tailwind, ShadCN, Recharts.
-- **Backend:** Node.js, Fastify, Prisma, Redis.
-- **IA:** Google Gemini 1.5 Flash/Pro, Groq.
-- **Sécurité:** JWT, AES-256 (token encryption), Télémetry (ActionLog).
-
-## ⚙️ Installation & Lancement
-
-### Prérequis
-- Node.js 18+
-- PostgreSQL
-- Redis
-- Gemini API Key
-
-### Configuration
-1. Clonez le repo et installez les dépendances :
-   ```bash
-   npm install
-   ```
-2. Configurez les variables d'environnement dans `server/.env` :
-   - `DATABASE_URL`
-   - `JWT_SECRET`
-   - `GEMINI_API_KEY`
-   - `ENCRYPTION_KEY` (32 chars)
-
-### Développement
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 📈 Guide d'Audit et Évolutions
-Consultez `UPGRADE_REPORT.md` pour voir les détails des optimisations de production (Encryption, Indexing, Telemetry).
-Consultez `SYSTEM_AGENTS.md` pour le protocole de gestion des agents IA et les règles de décision automatique.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
