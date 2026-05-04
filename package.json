@@ -1,34 +1,45 @@
 {
-  "name": "client",
-  "version": "0.1.0",
+  "name": "beko-ads-pilot",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npm install --legacy-peer-deps && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "node server/index.js"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "@prisma/client": "^6.0.0",
+    "@tailwindcss/postcss": "^4.0.7",
+    "axios": "^1.7.9",
     "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.7",
+    "fastify": "^4.26.2",
+    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.475.0",
-    "next": "15.0.0",
-    "next-intl": "^3.26.3",
+    "next": "15.1.6",
+    "next-intl": "^3.26.5",
+    "node-cron": "^3.0.3",
+    "pino": "^9.6.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "recharts": "^2.15.1",
     "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.0.0",
+    "eslint-config-next": "15.1.6",
     "postcss": "^8",
+    "prisma": "^6.0.0",
     "tailwindcss": "^4.0.7",
     "typescript": "^5"
   }
