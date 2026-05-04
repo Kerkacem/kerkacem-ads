@@ -1,7 +1,9 @@
-import { defineSchema } from '@prisma/client';
-// Fix: Handle potential undefined env variable safely
-export default defineSchema({
+import { defineConfig, env } from 'prisma/config';
+import 'dotenv/config';
+
+export default defineConfig({
+  schema: './server/prisma/schema.prisma',
   datasource: {
-    url: process.env["DATABASE_URL"] || "postgresql://user:password@localhost:5432/mydb",
+    url: env('DATABASE_URL') || "postgresql://user:password@localhost:5432/mydb",
   },
 });
