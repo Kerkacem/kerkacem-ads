@@ -1,13 +1,11 @@
 {
   "name": "beko-ads-pilot",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "server": "node server/index.js"
+    "lint": "next lint --ignore-path server"
   },
   "engines": {
     "node": ">=18.0.0"
